@@ -11,6 +11,7 @@ public class Hand : MonoBehaviour {
 	private float oldIndexTriggerState = 0;
 
 	private bool drum_activated = false;
+	private bool piano_activated = false;
 	public Drum drum;
 
 
@@ -47,6 +48,21 @@ public class Hand : MonoBehaviour {
 					drum_activated = false;
 					hitObject.gameObject.GetComponent<Renderer> ().material.color = Color.blue;
 					//Drum.kill ();
+				}
+			} else if (hitObject.CompareTag ("piano_button")) {
+				if (drum_activated) {
+					drum_activated = false;
+					hitObject.gameObject.GetComponent<Renderer> ().material.color = Color.red;
+					//Drum.kill ()
+				}
+				if (!piano_activated) {
+					piano_activated = true;
+					hitObject.gameObject.GetComponent<Renderer> ().material.color = Color.red;
+					//Piano.activate ();
+				} else {
+					piano_activated = false;
+					hitObject.gameObject.GetComponent<Renderer> ().material.color = Color.blue;
+					//Piano.kill ();
 				}
 			}
 		}
