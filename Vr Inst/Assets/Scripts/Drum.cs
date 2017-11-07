@@ -15,7 +15,6 @@ public class Drum : MonoBehaviour {
 	}
 
 	static void activate () {
-		this.setActive (false);
 	}
 
 	static void kill () {

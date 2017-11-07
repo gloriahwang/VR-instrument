@@ -4,13 +4,17 @@ folderAsset: yes
 timeCreated: 1444263910
 licenseType: Store
 PluginImporter:
+<<<<<<< HEAD
   externalObjects: {}
+=======
+>>>>>>> 8d345b0d7619cf1743c72a9bd7768331bef13f34
   serializedVersion: 2
   iconMap: {}
   executionOrder: {}
   isPreloaded: 1
   isOverridable: 0
   platformData:
+<<<<<<< HEAD
   - first:
       Any: 
     second:
@@ -37,6 +41,39 @@ PluginImporter:
     second:
       enabled: 1
       settings: {}
+=======
+    data:
+      first:
+        Any: 
+      second:
+        enabled: 0
+        settings: {}
+    data:
+      first:
+        Editor: Editor
+      second:
+        enabled: 1
+        settings:
+          DefaultValueInitialized: true
+    data:
+      first:
+        Standalone: OSXIntel
+      second:
+        enabled: 1
+        settings: {}
+    data:
+      first:
+        Standalone: OSXIntel64
+      second:
+        enabled: 1
+        settings: {}
+    data:
+      first:
+        Standalone: OSXUniversal
+      second:
+        enabled: 1
+        settings: {}
+>>>>>>> 8d345b0d7619cf1743c72a9bd7768331bef13f34
   userData: 
   assetBundleName: 
   assetBundleVariant: 

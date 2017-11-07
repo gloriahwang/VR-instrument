@@ -27,15 +27,13 @@ public class Hand : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		
-
 	}
 
 	void select () {
 
 		RaycastHit hit;
-		Vector3 origin = particleSystem.transform.position;
-		Vector3 direction = particleSystem.transform.right;
+		Vector3 origin = GetComponent<ParticleSystem>().transform.position;
+		Vector3 direction = GetComponent<ParticleSystem>().transform.right;
 
 		if (Physics.Raycast (origin, direction, out hit, 100f)) {
 			Debug.DrawRay (origin, direction);
@@ -44,16 +42,14 @@ public class Hand : MonoBehaviour {
 				if (!drum_activated) {
 					drum_activated = true;
 					hitObject.gameObject.GetComponent<Renderer> ().material.color = Color.red;
-					Drum.activate ();
+					//Drum.activate ();
 				} else {
 					drum_activated = false;
 					hitObject.gameObject.GetComponent<Renderer> ().material.color = Color.blue;
-					Drum.kill ();
+					//Drum.kill ();
 				}
 			}
 		}
-
-
 
 	}
 }
