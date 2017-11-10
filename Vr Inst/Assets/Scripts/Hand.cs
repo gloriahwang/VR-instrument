@@ -14,6 +14,10 @@ public class Hand : MonoBehaviour {
 	private bool piano_activated = false;
 	public Drum drum;
 
+	private bool holdingStick = false;
+	private GameObject stick = null;
+	public Vector3 holdPosition = new Vector3(0, -0.025f, 0.03f);
+	public Vector3 holdRotation = new Vector3(0, 180, 0);
 
 	// Update is called once per frame
 	void Update () {
@@ -25,9 +29,50 @@ public class Hand : MonoBehaviour {
 			select ();
 		}
 
+		if (holdingStick) {
+			if (handTriggerState < 0.9f) {
+				Release();
+			}
+		}
+
 	}
 
-	void OnTriggerEnter(Collider other) {
+	void Release() {
+		stick.transform.parent = null;
+
+		Rigidbody rigidbody = stick.GetComponent<Rigidbody>();
+
+		rigidbody.useGravity = true;
+		rigidbody.isKinematic = false;
+
+		rigidbody.velocity = OVRInput.GetLocalControllerVelocity(controller);
+
+		holdingStick = false;
+		stick = null;
+	}
+
+	//void OnTriggerEnter(Collider other) {
+	//}
+
+	void OnTriggerStay(Collider other) {
+		if (other.CompareTag("Stick")) {
+			if (handTriggerState > 0.9f && !holdingStick) {
+				Grab(other.gameObject);
+			}
+		}
+	}
+
+	void Grab(GameObject obj) {
+		holdingStick = true;
+		stick = obj;
+
+		stick.transform.parent = transform;
+
+		stick.transform.localPosition = holdPosition;
+		stick.transform.localEulerAngles = holdRotation;
+
+		stick.GetComponent<Rigidbody>().useGravity = false;
+		stick.GetComponent<Rigidbody>().isKinematic = true;
 	}
 
 	void select () {

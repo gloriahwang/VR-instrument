@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class Play : MonoBehaviour {
 
+	AudioSource audio;
+
 	// Use this for initialization
 	void Start () {
-		
+		audio = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	void OnTriggerEnter(Collider other){
+		audio.Play ();
 	}
 }
