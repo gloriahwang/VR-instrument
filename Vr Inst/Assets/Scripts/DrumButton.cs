@@ -17,11 +17,11 @@ public class DrumButton : MonoBehaviour {
 		
 	}
 
-	void activate () {
+	public void activate () {
 		drum.gameObject.SetActive (true);
 	}
 
-	void kill () {
+	public void kill () {
 		drum.gameObject.SetActive (false);
 	}
 }
