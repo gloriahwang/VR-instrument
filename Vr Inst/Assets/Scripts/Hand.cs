@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hand : MonoBehaviour {
 
-	public OVRInput.Controller controller;
+//	public OVRInput.Controller controller;
 
 	private float indexTriggerState = 0;
 	private float handTriggerState = 0;
@@ -23,8 +23,8 @@ public class Hand : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		oldIndexTriggerState = indexTriggerState;
-		indexTriggerState = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, controller);
-		handTriggerState = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, controller);
+//		indexTriggerState = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, controller);
+//		handTriggerState = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, controller);
 
 		if (indexTriggerState > 0.9f && oldIndexTriggerState < 0.9f) {
 			select ();
@@ -46,7 +46,7 @@ public class Hand : MonoBehaviour {
 		rigidbody.useGravity = true;
 		rigidbody.isKinematic = false;
 
-		rigidbody.velocity = OVRInput.GetLocalControllerVelocity(controller);
+//		rigidbody.velocity = OVRInput.GetLocalControllerVelocity(controller);
 
 		holdingStick = false;
 		stick = null;

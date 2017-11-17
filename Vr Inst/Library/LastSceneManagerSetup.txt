@@ -1,7 +1,4 @@
 sceneSetups:
-- path: Assets/Khang.unity
-  isLoaded: 0
-  isActive: 0
-- path: Assets/VR_instrument.unity
+- path: Assets/Theremin ball.unity
   isLoaded: 1
   isActive: 1
