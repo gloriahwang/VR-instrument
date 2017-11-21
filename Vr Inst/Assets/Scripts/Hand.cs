@@ -17,8 +17,8 @@ public class Hand : MonoBehaviour {
 
 	private bool holdingStick = false;
 	private GameObject stick = null;
-	public Vector3 holdPosition = new Vector3(0, -0.025f, 0.03f);
-	public Vector3 holdRotation = new Vector3(0, 180, 0);
+	private Vector3 holdPosition = new Vector3(-0.008f, 0.036f, -0.0095f);
+	private Vector3 holdRotation = new Vector3(20.5f, 1f, 12f);
 
 	// Update is called once per frame
 	void Update () {
@@ -27,7 +27,7 @@ public class Hand : MonoBehaviour {
 		handTriggerState = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, controller);
 
 		if (indexTriggerState > 0.9f && oldIndexTriggerState < 0.9f) {
-			select ();
+		//	select ();
 		}
 
 		if (holdingStick) {
@@ -52,8 +52,21 @@ public class Hand : MonoBehaviour {
 		stick = null;
 	}
 
-	//void OnTriggerEnter(Collider other) {
-	//}
+	void OnTriggerEnter(Collider other) {
+		print (other.name);
+		if (other.CompareTag ("drum_button")) {
+			if (!drum_activated) {
+				drum_activated = true;
+				other.gameObject.GetComponent<Renderer> ().material.color = Color.red;
+				drum.gameObject.SetActive (true);
+			} else {
+				drum_activated = false;
+				other.gameObject.GetComponent<Renderer> ().material.color = Color.blue;
+				drum.gameObject.SetActive (false);
+			}
+
+		} 
+	}
 
 	void OnTriggerStay(Collider other) {
 		if (other.CompareTag("Stick")) {
@@ -61,6 +74,19 @@ public class Hand : MonoBehaviour {
 				Grab(other.gameObject);
 			}
 		}
+		/*
+		else if (other.CompareTag ("drum_button")) {
+			if (!drum_activated) {
+				drum_activated = true;
+				other.gameObject.GetComponent<Renderer> ().material.color = Color.red;
+				drum.gameObject.SetActive (true);
+			} else {
+				drum_activated = false;
+				other.gameObject.GetComponent<Renderer> ().material.color = Color.blue;
+				drum.gameObject.SetActive (false);
+			}
+
+		} */
 	}
 
 	void Grab(GameObject obj) {
@@ -72,6 +98,9 @@ public class Hand : MonoBehaviour {
 		stick.transform.localPosition = holdPosition;
 		stick.transform.localEulerAngles = holdRotation;
 
+		print (holdPosition);
+		print (holdRotation);
+
 		stick.GetComponent<Rigidbody>().useGravity = false;
 		stick.GetComponent<Rigidbody>().isKinematic = true;
 	}
@@ -82,6 +111,10 @@ public class Hand : MonoBehaviour {
 		//Vector3 origin = GetComponent<ParticleSystem>().transform.position;
 		//Vector3 direction = GetComponent<ParticleSystem>().transform.right;
 		/*
+
+		Vector3 origin = transform.position;
+		Vector3 direction = transform.right;
+		
 		if (Physics.Raycast (origin, direction, out hit, 100f)) {
 			Debug.DrawRay (origin, direction);
 			GameObject hitObject = hit.collider.gameObject;
