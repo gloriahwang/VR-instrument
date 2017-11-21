@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hand : MonoBehaviour {
 
-//	public OVRInput.Controller controller;
+	public OVRInput.Controller controller;
 
 	private float indexTriggerState = 0;
 	private float handTriggerState = 0;
@@ -23,8 +23,8 @@ public class Hand : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		oldIndexTriggerState = indexTriggerState;
-//		indexTriggerState = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, controller);
-//		handTriggerState = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, controller);
+		indexTriggerState = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, controller);
+		handTriggerState = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, controller);
 
 		if (indexTriggerState > 0.9f && oldIndexTriggerState < 0.9f) {
 			select ();
@@ -46,7 +46,7 @@ public class Hand : MonoBehaviour {
 		rigidbody.useGravity = true;
 		rigidbody.isKinematic = false;
 
-//		rigidbody.velocity = OVRInput.GetLocalControllerVelocity(controller);
+		rigidbody.velocity = OVRInput.GetLocalControllerVelocity(controller);
 
 		holdingStick = false;
 		stick = null;
@@ -79,9 +79,9 @@ public class Hand : MonoBehaviour {
 	void select () {
 
 		RaycastHit hit;
-		Vector3 origin = GetComponent<ParticleSystem>().transform.position;
-		Vector3 direction = GetComponent<ParticleSystem>().transform.right;
-
+		//Vector3 origin = GetComponent<ParticleSystem>().transform.position;
+		//Vector3 direction = GetComponent<ParticleSystem>().transform.right;
+		/*
 		if (Physics.Raycast (origin, direction, out hit, 100f)) {
 			Debug.DrawRay (origin, direction);
 			GameObject hitObject = hit.collider.gameObject;
@@ -111,7 +111,8 @@ public class Hand : MonoBehaviour {
 					//Piano.kill ();
 				}
 			}
-		}
+		}*/
 
 	}
+	
 }

@@ -7,13 +7,17 @@ public class Pitch_controller : MonoBehaviour {
 	AudioSource violin_sample;
 	public int startingpitch = 5;
 	public GameObject dynamics;
+	private float startingpos; 
 
 	// Use this for initialization
 	void Start () {
 		violin_sample = GetComponent<AudioSource> ();
-		dynamics = GameObject.Find ("Dynamic controller");
+		dynamics = GameObject.Find ("LeftHandAnchor");
 		violin_sample.loop = true;
 		violin_sample.pitch = startingpitch;
+
+		startingpos = this.transform.localPosition.z + 1;
+		print (startingpos);
 	}
 	
 	// Update is called once per frame
@@ -42,7 +46,8 @@ public class Pitch_controller : MonoBehaviour {
 			violin_sample.volume = 0.0f;
 		} else {
 			violin_sample.volume = (float)(z_d + 4.71) / 2 + 0.5f;
-		}	
-		violin_sample.pitch = (z + startingpitch) / 10;
+		}
+			
+		violin_sample.pitch = (startingpos + z) / startingpos; 
 	}
 }
