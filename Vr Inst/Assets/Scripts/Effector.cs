@@ -5,7 +5,7 @@ using UnityEngine;
 public class Effector : MonoBehaviour {
 
 	public Drum drum;
-	public Piano piano;
+//	public Piano piano;
 	float sliderValue;
 	AudioSource[] drumAudios;
 	AudioSource[] pianoAudios;
@@ -13,14 +13,10 @@ public class Effector : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		drumAudios = drum.GetComponentsInChildren<AudioSource>();
-		pianoAudios = piano.GetComponentsInChildren<AudioSource> ();
+//		pianoAudios = piano.GetComponentsInChildren<AudioSource> ();
 		sliderValue = 0.5f;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 
 	void OnGUI() {
 		sliderValue = GUI.HorizontalSlider (new Rect (25, 25, 200, 60), sliderValue, 0.0F, 1.0F);

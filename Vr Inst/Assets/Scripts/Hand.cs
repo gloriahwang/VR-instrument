@@ -54,6 +54,9 @@ public class Hand : MonoBehaviour {
 			if (!drum_activated) {
 				drum_activated = true;
 				other.gameObject.GetComponent<Renderer> ().material.color = Color.red;
+				drum.transform.GetChild (6).transform.localPosition = new Vector3 (1.27f, -1.66f, -1.1f);
+				drum.transform.GetChild (7).transform.localPosition = new Vector3 (1.22f, -1.68f, -0.96f);
+			
 				drum.gameObject.SetActive (true);
 			} else {
 				drum_activated = false;
