@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PianoButton : MonoBehaviour {
 
+	public Piano piano;
+
 	// Use this for initialization
 	void Start () {
 		GameObject text = new GameObject();
@@ -21,9 +23,10 @@ public class PianoButton : MonoBehaviour {
 	}
 
 	static void activate () {
+		piano.gameObject.SetActive (true);
 	}
 
 	static void kill () {
-
+		piano.gameObject.SetActive (false);
 	}
 }
