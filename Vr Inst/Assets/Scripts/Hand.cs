@@ -17,8 +17,10 @@ public class Hand : MonoBehaviour {
 
 	private bool holdingStick = false;
 	private GameObject stick = null;
-	private Vector3 holdPosition = new Vector3(-0.008f, 0.036f, -0.0095f);
-	private Vector3 holdRotation = new Vector3(20.5f, 1f, 12f);
+	private Vector3 RholdPosition = new Vector3(0.0f, 0.0469f, 0.009f);
+	private Vector3 RholdRotation = new Vector3(20.5f, 1f, 12f);
+	private Vector3 LholdPosition = new Vector3(-0.0084f, 0.045f, 0.0032f);
+	private Vector3 LholdRotation = new Vector3(25.8f, 0.1f, -7f);
 
 	// Update is called once per frame
 	void Update () {
@@ -90,11 +92,18 @@ public class Hand : MonoBehaviour {
 
 		stick.transform.parent = transform;
 
-		stick.transform.localPosition = holdPosition;
-		stick.transform.localEulerAngles = holdRotation;
 
-		print (holdPosition);
-		print (holdRotation);
+		if (CompareTag ("LeftHand")) {
+			stick.transform.localPosition = LholdPosition;
+			stick.transform.localEulerAngles = LholdRotation;
+		}
+
+
+		if (CompareTag ("RightHand")) {
+			stick.transform.localPosition = RholdPosition;
+			stick.transform.localEulerAngles = RholdRotation;
+		}
+
 
 		stick.GetComponent<Rigidbody>().useGravity = false;
 		stick.GetComponent<Rigidbody>().isKinematic = true;
