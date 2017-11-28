@@ -13,7 +13,7 @@ public class Hand : MonoBehaviour {
 	private bool drum_activated = false;
 	private bool piano_activated = false;
 	public Drum drum;
-	public DrumButton drumbutton;
+	//public Piano piano;
 
 	private bool holdingStick = false;
 	private GameObject stick = null;
@@ -25,10 +25,6 @@ public class Hand : MonoBehaviour {
 		oldIndexTriggerState = indexTriggerState;
 		indexTriggerState = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, controller);
 		handTriggerState = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, controller);
-
-		if (indexTriggerState > 0.9f && oldIndexTriggerState < 0.9f) {
-		//	select ();
-		}
 
 		if (holdingStick) {
 			if (handTriggerState < 0.9f) {
@@ -64,8 +60,17 @@ public class Hand : MonoBehaviour {
 				other.gameObject.GetComponent<Renderer> ().material.color = Color.blue;
 				drum.gameObject.SetActive (false);
 			}
-
-		} 
+		} else if (other.CompareTag ("piano_button")) {
+			if (!piano_activated) {
+				piano_activated = true;
+				other.gameObject.GetComponent<Renderer> ().material.color = Color.red;
+//				piano.gameObject.SetActive (true);
+			} else {
+				drum_activated = false;
+				other.gameObject.GetComponent<Renderer> ().material.color = Color.blue;
+//				piano.gameObject.SetActive (false);
+			}
+		}
 	}
 
 	void OnTriggerStay(Collider other) {
@@ -74,19 +79,6 @@ public class Hand : MonoBehaviour {
 				Grab(other.gameObject);
 			}
 		}
-		/*
-		else if (other.CompareTag ("drum_button")) {
-			if (!drum_activated) {
-				drum_activated = true;
-				other.gameObject.GetComponent<Renderer> ().material.color = Color.red;
-				drum.gameObject.SetActive (true);
-			} else {
-				drum_activated = false;
-				other.gameObject.GetComponent<Renderer> ().material.color = Color.blue;
-				drum.gameObject.SetActive (false);
-			}
-
-		} */
 	}
 
 	void Grab(GameObject obj) {
@@ -104,48 +96,6 @@ public class Hand : MonoBehaviour {
 		stick.GetComponent<Rigidbody>().useGravity = false;
 		stick.GetComponent<Rigidbody>().isKinematic = true;
 	}
-
-	void select () {
-
-		RaycastHit hit;
-		//Vector3 origin = GetComponent<ParticleSystem>().transform.position;
-		//Vector3 direction = GetComponent<ParticleSystem>().transform.right;
-		/*
-
-		Vector3 origin = transform.position;
-		Vector3 direction = transform.right;
 		
-		if (Physics.Raycast (origin, direction, out hit, 100f)) {
-			Debug.DrawRay (origin, direction);
-			GameObject hitObject = hit.collider.gameObject;
-			if (hitObject.CompareTag ("drum_button")) {
-				if (!drum_activated) {
-					drum_activated = true;
-					hitObject.gameObject.GetComponent<Renderer> ().material.color = Color.red;
-					drumbutton.activate ();
-				} else {
-					drum_activated = false;
-					hitObject.gameObject.GetComponent<Renderer> ().material.color = Color.blue;
-					drumbutton.kill ();
-				}
-			} else if (hitObject.CompareTag ("piano_button")) {
-				if (drum_activated) {
-					drum_activated = false;
-					hitObject.gameObject.GetComponent<Renderer> ().material.color = Color.red;
-					//Drum.kill ()
-				}
-				if (!piano_activated) {
-					piano_activated = true;
-					hitObject.gameObject.GetComponent<Renderer> ().material.color = Color.red;
-					//Piano.activate ();
-				} else {
-					piano_activated = false;
-					hitObject.gameObject.GetComponent<Renderer> ().material.color = Color.blue;
-					//Piano.kill ();
-				}
-			}
-		}*/
-
-	}
 	
 }
