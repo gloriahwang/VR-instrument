@@ -10,14 +10,12 @@ public class Drum : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		 
+	void Update () { 
 	}
 
 	static void activate () {
 	}
 
 	static void kill () {
-		
 	}
 }

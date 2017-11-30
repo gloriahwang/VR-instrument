@@ -22,11 +22,11 @@ public class PianoButton : MonoBehaviour {
 		
 	}
 
-	static void activate () {
+	public void activate () {
 		piano.gameObject.SetActive (true);
 	}
 
-	static void kill () {
+	public void kill () {
 		piano.gameObject.SetActive (false);
 	}
 }

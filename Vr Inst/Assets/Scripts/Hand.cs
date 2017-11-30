@@ -13,7 +13,7 @@ public class Hand : MonoBehaviour {
 	private bool drum_activated = false;
 	private bool piano_activated = false;
 	public Drum drum;
-	//public Piano piano;
+	public Piano piano;
 
 	private bool holdingStick = false;
 	private GameObject stick = null;
@@ -69,11 +69,11 @@ public class Hand : MonoBehaviour {
 			if (!piano_activated) {
 				piano_activated = true;
 				other.gameObject.GetComponent<Renderer> ().material.color = Color.red;
-//				piano.gameObject.SetActive (true);
+				piano.gameObject.SetActive (true);
 			} else {
 				drum_activated = false;
 				other.gameObject.GetComponent<Renderer> ().material.color = Color.blue;
-//				piano.gameObject.SetActive (false);
+				piano.gameObject.SetActive (false);
 			}
 		}
 	}

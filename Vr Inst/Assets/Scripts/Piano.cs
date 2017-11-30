@@ -11,6 +11,11 @@ public class Piano : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+	}
+
+	static void activate () {
+	}
+
+	static void kill () {
 	}
 }

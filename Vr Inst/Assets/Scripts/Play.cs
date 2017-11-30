@@ -8,7 +8,8 @@ public class Play : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		audio = GetComponent<AudioSource> ();
+		audio = transform.Find ("sound source").GetComponent<AudioSource> ();
+//		audio = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame

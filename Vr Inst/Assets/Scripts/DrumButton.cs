@@ -6,7 +6,6 @@ public class DrumButton : MonoBehaviour {
 
 	public Drum drum;
 
-
 	// Use this for initialization
 	void Start () {
 		GameObject text = new GameObject();
@@ -16,12 +15,10 @@ public class DrumButton : MonoBehaviour {
 		t.color = Color.black;
 		t.transform.localEulerAngles += new Vector3 (0, 0, 0);
 		t.transform.localPosition += new Vector3 (0f, 1.3f, 1.85f);
-
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
 
 	public void activate () {
