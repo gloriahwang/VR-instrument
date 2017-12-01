@@ -12,8 +12,10 @@ public class Hand : MonoBehaviour {
 
 	private bool drum_activated = false;
 	private bool piano_activated = false;
+	private bool theremin_activated = false;
 	public Drum drum;
 	public Piano piano;
+	public Theremin theremin;
 
 	private bool holdingStick = false;
 	private GameObject stick = null;
@@ -74,6 +76,17 @@ public class Hand : MonoBehaviour {
 				drum_activated = false;
 				other.gameObject.GetComponent<Renderer> ().material.color = Color.blue;
 				piano.gameObject.SetActive (false);
+			}
+		}
+		else if (other.CompareTag ("theremin_button")) {
+			if (!theremin_activated) {
+				theremin_activated = true;
+				other.gameObject.GetComponent<Renderer> ().material.color = Color.red;
+				theremin.gameObject.SetActive (true);
+			} else {
+				theremin_activated = false;
+				other.gameObject.GetComponent<Renderer> ().material.color = Color.blue;
+				theremin.gameObject.SetActive (false);
 			}
 		}
 	}
