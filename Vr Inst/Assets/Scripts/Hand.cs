@@ -19,6 +19,7 @@ public class Hand : MonoBehaviour {
 
 	private bool holdingStick = false;
 	private GameObject stick = null;
+	private Transform oldparent;
 	private Vector3 RholdPosition = new Vector3(0.0f, 0.0469f, 0.009f);
 	private Vector3 RholdRotation = new Vector3(20.5f, 1f, 12f);
 	private Vector3 LholdPosition = new Vector3(-0.0084f, 0.045f, 0.0032f);
@@ -39,14 +40,14 @@ public class Hand : MonoBehaviour {
 	}
 
 	void Release() {
-		stick.transform.parent = null;
+		stick.transform.parent = oldparent;
 
 		Rigidbody rigidbody = stick.GetComponent<Rigidbody>();
 
-		rigidbody.useGravity = true;
+		rigidbody.useGravity = false;
 		rigidbody.isKinematic = false;
 
-		rigidbody.velocity = OVRInput.GetLocalControllerVelocity(controller);
+		//rigidbody.velocity = OVRInput.GetLocalControllerVelocity(controller); Khang: Keeping sticks stationary
 
 		holdingStick = false;
 		stick = null;
@@ -58,9 +59,9 @@ public class Hand : MonoBehaviour {
 			if (!drum_activated) {
 				drum_activated = true;
 				other.gameObject.GetComponent<Renderer> ().material.color = Color.red;
-				drum.transform.GetChild (6).transform.localPosition = new Vector3 (1.27f, -1.66f, -1.1f);
-				drum.transform.GetChild (7).transform.localPosition = new Vector3 (1.22f, -1.68f, -0.96f);
-			
+				//drum.transform.GetChild (4).transform.localPosition = new Vector3 (1.27f, -1.66f, -1.1f);
+				//drum.transform.GetChild (5).transform.localPosition = new Vector3 (1.22f, -1.68f, -0.96f);
+
 				drum.gameObject.SetActive (true);
 			} else {
 				drum_activated = false;
@@ -103,6 +104,7 @@ public class Hand : MonoBehaviour {
 		holdingStick = true;
 		stick = obj;
 
+		oldparent = stick.transform.parent;
 		stick.transform.parent = transform;
 
 

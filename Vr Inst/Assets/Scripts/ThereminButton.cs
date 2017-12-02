@@ -10,11 +10,13 @@ public class ThereminButton : MonoBehaviour {
 	void Start () {
 		GameObject text = new GameObject();
 		TextMesh t = text.AddComponent<TextMesh>();
+		t.transform.parent = transform;
 		t.text = "Theremin";
-		t.fontSize = 12;
+		t.fontSize = 30;
 		t.color = Color.black;
 		t.transform.localEulerAngles += new Vector3 (0, 180, 0);
-		t.transform.localPosition += new Vector3 (0f, 2.3f, -1.83f);
+		t.transform.localPosition = new Vector3 (0.37f, 0.115f, 0.506f);
+		t.transform.localScale = new Vector3 (0.0579f, 0.0579f, 0.0579f);
 	}
 
 	// Update is called once per frame

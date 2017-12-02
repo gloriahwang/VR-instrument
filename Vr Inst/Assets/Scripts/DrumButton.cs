@@ -10,11 +10,13 @@ public class DrumButton : MonoBehaviour {
 	void Start () {
 		GameObject text = new GameObject();
 		TextMesh t = text.AddComponent<TextMesh>();
+		t.transform.parent = transform;
 		t.text = "Drums";
-		t.fontSize = 12;
+		t.fontSize = 30;
 		t.color = Color.black;
 		t.transform.localEulerAngles += new Vector3 (0, 0, 0);
-		t.transform.localPosition += new Vector3 (0f, 1.3f, 1.85f);
+		t.transform.localPosition = new Vector3 (-0.33f, 0.103f, -0.484f);
+		t.transform.localScale = new Vector3 (0.0767f, 0.0767f, 0.0767f);
 	}
 	
 	// Update is called once per frame

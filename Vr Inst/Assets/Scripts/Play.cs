@@ -8,7 +8,7 @@ public class Play : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		audio = transform.Find ("sound source").GetComponent<AudioSource> ();
+		audio = transform.Find ("Sound Source").GetComponent<AudioSource> ();
 //		audio = GetComponent<AudioSource> ();
 	}
 	

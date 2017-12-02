@@ -1,0 +1,247 @@
+fileFormatVersion: 2
+guid: 111d0bbb11c791f4783e69926aab6915
+timeCreated: 1512168734
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: drum1
+    100004: drum1_drum1_bottom
+    100006: drum1_stand1
+    100008: drum2_polySurface5
+    100010: drum2_polySurface5_drum_top
+    100012: drum2_polySurface5_drum_top_polySurface53
+    100014: drum2_polySurface5_stand2
+    100016: drum2_polySurface5_stand2_feet2
+    100018: drum2_polySurface5_stand2_feet2_polySurface54
+    100020: drum2_polySurface5_stand2_feet2_polySurface58
+    100022: drum3_4
+    100024: drum3_4_drum3
+    100026: drum3_4_drum3_drum3_bottom
+    100028: drum3_4_drum3_drum3_middle
+    100030: drum3_4_drum4
+    100032: drum3_4_drum4_drum4_bottom
+    100034: drum3_4_drum4_drum4_middle
+    100036: drum5_Mesh
+    100038: drum5_Mesh_drum5_bottom
+    100040: drum5_Mesh_drum5_middle
+    100042: drum5_Mesh_drum5_middle_stand5_1
+    100044: drum5_Mesh_drum5_middle_stand5_1_polySurface47
+    100046: drum5_Mesh_drum5_middle_stand5_2
+    100048: drum5_Mesh_drum5_middle_stand5_2_polySurface46
+    100050: drum5_Mesh_drum5_middle_stand5_3
+    100052: drum5_Mesh_drum5_middle_stand5_3_polySurface48
+    100054: drum5_Mesh_drum5_middle_stand5_4
+    100056: drum5_Mesh_drum5_middle_stand5_4_polySurface61
+    100058: drum6
+    100060: drum6_stand6
+    400000: //RootNode
+    400002: drum1
+    400004: drum1_drum1_bottom
+    400006: drum1_stand1
+    400008: drum2_polySurface5
+    400010: drum2_polySurface5_drum_top
+    400012: drum2_polySurface5_drum_top_polySurface53
+    400014: drum2_polySurface5_stand2
+    400016: drum2_polySurface5_stand2_feet2
+    400018: drum2_polySurface5_stand2_feet2_polySurface54
+    400020: drum2_polySurface5_stand2_feet2_polySurface58
+    400022: drum3_4
+    400024: drum3_4_drum3
+    400026: drum3_4_drum3_drum3_bottom
+    400028: drum3_4_drum3_drum3_middle
+    400030: drum3_4_drum4
+    400032: drum3_4_drum4_drum4_bottom
+    400034: drum3_4_drum4_drum4_middle
+    400036: drum5_Mesh
+    400038: drum5_Mesh_drum5_bottom
+    400040: drum5_Mesh_drum5_middle
+    400042: drum5_Mesh_drum5_middle_stand5_1
+    400044: drum5_Mesh_drum5_middle_stand5_1_polySurface47
+    400046: drum5_Mesh_drum5_middle_stand5_2
+    400048: drum5_Mesh_drum5_middle_stand5_2_polySurface46
+    400050: drum5_Mesh_drum5_middle_stand5_3
+    400052: drum5_Mesh_drum5_middle_stand5_3_polySurface48
+    400054: drum5_Mesh_drum5_middle_stand5_4
+    400056: drum5_Mesh_drum5_middle_stand5_4_polySurface61
+    400058: drum6
+    400060: drum6_stand6
+    2300000: drum1
+    2300002: drum1_drum1_bottom
+    2300004: drum1_stand1
+    2300006: drum2_polySurface5
+    2300008: drum2_polySurface5_drum_top
+    2300010: drum2_polySurface5_drum_top_polySurface53
+    2300012: drum2_polySurface5_stand2
+    2300014: drum2_polySurface5_stand2_feet2
+    2300016: drum2_polySurface5_stand2_feet2_polySurface54
+    2300018: drum2_polySurface5_stand2_feet2_polySurface58
+    2300020: drum3_4
+    2300022: drum3_4_drum3
+    2300024: drum3_4_drum3_drum3_bottom
+    2300026: drum3_4_drum3_drum3_middle
+    2300028: drum3_4_drum4
+    2300030: drum3_4_drum4_drum4_bottom
+    2300032: drum3_4_drum4_drum4_middle
+    2300034: drum5_Mesh
+    2300036: drum5_Mesh_drum5_bottom
+    2300038: drum5_Mesh_drum5_middle
+    2300040: drum5_Mesh_drum5_middle_stand5_1
+    2300042: drum5_Mesh_drum5_middle_stand5_1_polySurface47
+    2300044: drum5_Mesh_drum5_middle_stand5_2
+    2300046: drum5_Mesh_drum5_middle_stand5_2_polySurface46
+    2300048: drum5_Mesh_drum5_middle_stand5_3
+    2300050: drum5_Mesh_drum5_middle_stand5_3_polySurface48
+    2300052: drum5_Mesh_drum5_middle_stand5_4
+    2300054: drum5_Mesh_drum5_middle_stand5_4_polySurface61
+    2300056: drum6
+    2300058: drum6_stand6
+    3300000: drum1
+    3300002: drum1_drum1_bottom
+    3300004: drum1_stand1
+    3300006: drum2_polySurface5
+    3300008: drum2_polySurface5_drum_top
+    3300010: drum2_polySurface5_drum_top_polySurface53
+    3300012: drum2_polySurface5_stand2
+    3300014: drum2_polySurface5_stand2_feet2
+    3300016: drum2_polySurface5_stand2_feet2_polySurface54
+    3300018: drum2_polySurface5_stand2_feet2_polySurface58
+    3300020: drum3_4
+    3300022: drum3_4_drum3
+    3300024: drum3_4_drum3_drum3_bottom
+    3300026: drum3_4_drum3_drum3_middle
+    3300028: drum3_4_drum4
+    3300030: drum3_4_drum4_drum4_bottom
+    3300032: drum3_4_drum4_drum4_middle
+    3300034: drum5_Mesh
+    3300036: drum5_Mesh_drum5_bottom
+    3300038: drum5_Mesh_drum5_middle
+    3300040: drum5_Mesh_drum5_middle_stand5_1
+    3300042: drum5_Mesh_drum5_middle_stand5_1_polySurface47
+    3300044: drum5_Mesh_drum5_middle_stand5_2
+    3300046: drum5_Mesh_drum5_middle_stand5_2_polySurface46
+    3300048: drum5_Mesh_drum5_middle_stand5_3
+    3300050: drum5_Mesh_drum5_middle_stand5_3_polySurface48
+    3300052: drum5_Mesh_drum5_middle_stand5_4
+    3300054: drum5_Mesh_drum5_middle_stand5_4_polySurface61
+    3300056: drum6
+    3300058: drum6_stand6
+    4300000: drum1
+    4300002: drum1_drum1_bottom
+    4300004: drum1_stand1
+    4300006: drum2_polySurface5
+    4300008: drum2_polySurface5_drum_top
+    4300010: drum2_polySurface5_drum_top_polySurface53
+    4300012: drum2_polySurface5_stand2
+    4300014: drum2_polySurface5_stand2_feet2
+    4300016: drum2_polySurface5_stand2_feet2_polySurface54
+    4300018: drum2_polySurface5_stand2_feet2_polySurface58
+    4300020: drum3_4
+    4300022: drum3_4_drum3
+    4300024: drum3_4_drum3_drum3_bottom
+    4300026: drum3_4_drum3_drum3_middle
+    4300028: drum3_4_drum4
+    4300030: drum3_4_drum4_drum4_bottom
+    4300032: drum3_4_drum4_drum4_middle
+    4300034: drum5_Mesh
+    4300036: drum5_Mesh_drum5_bottom
+    4300038: drum5_Mesh_drum5_middle
+    4300040: drum5_Mesh_drum5_middle_stand5_1
+    4300042: drum5_Mesh_drum5_middle_stand5_1_polySurface47
+    4300044: drum5_Mesh_drum5_middle_stand5_2
+    4300046: drum5_Mesh_drum5_middle_stand5_2_polySurface46
+    4300048: drum5_Mesh_drum5_middle_stand5_3
+    4300050: drum5_Mesh_drum5_middle_stand5_3_polySurface48
+    4300052: drum5_Mesh_drum5_middle_stand5_4
+    4300054: drum5_Mesh_drum5_middle_stand5_4_polySurface61
+    4300056: drum6
+    4300058: drum6_stand6
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat15
+    second: {fileID: 2100000, guid: c29e6341c1d3677489ad7edb8ed6a62c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat5
+    second: {fileID: 2100000, guid: d92d0f451ddf6254db30c23ba361c372, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
