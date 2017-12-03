@@ -1,2 +1,29 @@
 Base path: /Applications/Unity/Unity.app/Contents
 Cmd: initializeCompiler
+Cmd: preprocess
+  insize=879 outsize=349 ok=1
+Cmd: preprocess
+  insize=2239 outsize=786 ok=1
+Cmd: preprocess
+  insize=1026 outsize=324 ok=1
+Cmd: preprocess
+  insize=760 outsize=199 ok=1
+Cmd: preprocess
+  insize=1102 outsize=433 ok=1
+Cmd: preprocess
+  insize=2837 outsize=1127 ok=1
+Cmd: preprocess
+  insize=1590 outsize=682 ok=1
+Cmd: preprocess
+  insize=319 outsize=319 ok=1
+Cmd: preprocess
+  insize=968 outsize=1778 ok=1
+Cmd: preprocess
+  insize=1651 outsize=920 ok=1
+Cmd: preprocess
+ Unhandled exception: Failed writing data to socket
+
+Quitting shader compiler process
+ze=10904 kw=DIRECTIONAL SHADOWS_SCREEN pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME ok=1
+Cmd: compileSnippet
+  api=15 type=1 insize=15528 outsize=0 kw=DIRECTIONAL SHADOWS_SCREEN pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME ok=1

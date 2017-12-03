@@ -36,7 +36,6 @@ public class Hand : MonoBehaviour {
 				Release();
 			}
 		}
-
 	}
 
 	void Release() {
@@ -74,12 +73,11 @@ public class Hand : MonoBehaviour {
 				other.gameObject.GetComponent<Renderer> ().material.color = Color.red;
 				piano.gameObject.SetActive (true);
 			} else {
-				drum_activated = false;
+				piano_activated = false;
 				other.gameObject.GetComponent<Renderer> ().material.color = Color.blue;
 				piano.gameObject.SetActive (false);
 			}
-		}
-		else if (other.CompareTag ("theremin_button")) {
+		} else if (other.CompareTag ("theremin_button")) {
 			if (!theremin_activated) {
 				theremin_activated = true;
 				other.gameObject.GetComponent<Renderer> ().material.color = Color.red;
@@ -107,18 +105,15 @@ public class Hand : MonoBehaviour {
 		oldparent = stick.transform.parent;
 		stick.transform.parent = transform;
 
-
 		if (CompareTag ("LeftHand")) {
 			stick.transform.localPosition = LholdPosition;
 			stick.transform.localEulerAngles = LholdRotation;
 		}
 
-
 		if (CompareTag ("RightHand")) {
 			stick.transform.localPosition = RholdPosition;
 			stick.transform.localEulerAngles = RholdRotation;
 		}
-
 
 		stick.GetComponent<Rigidbody>().useGravity = false;
 		stick.GetComponent<Rigidbody>().isKinematic = true;
