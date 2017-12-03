@@ -5,6 +5,7 @@ using UnityEngine;
 public class ThereminButton : MonoBehaviour {
 
 	public Theremin theremin;
+	private bool theremin_activated = false;
 
 	// Use this for initialization
 	void Start () {
@@ -30,5 +31,17 @@ public class ThereminButton : MonoBehaviour {
 
 	public void kill () {
 		theremin.gameObject.SetActive (false);
+	}
+
+	void OnTriggerEnter(Collider other) {
+		if (!theremin_activated) {
+			theremin_activated = true;
+			gameObject.GetComponent<Renderer> ().material.color = Color.red;
+			theremin.gameObject.SetActive (true);
+		} else {
+			theremin_activated = false;
+			gameObject.GetComponent<Renderer> ().material.color = Color.blue;
+			theremin.gameObject.SetActive (false);
+		}
 	}
 }

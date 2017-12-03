@@ -22,10 +22,10 @@ public class PitchDown : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		foreach (AudioSource audio in drumAudios) {
-			audio.pitch -= 0.1f;
+			audio.pitch -= 0.2f;
 		}
 		foreach (AudioSource audio in pianoAudios) {
-			audio.pitch -= 0.1f;
+			audio.pitch -= 0.2f;
 		}
 		StartCoroutine (Blinker ());
 	}

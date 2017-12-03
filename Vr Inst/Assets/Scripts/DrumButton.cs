@@ -5,6 +5,7 @@ using UnityEngine;
 public class DrumButton : MonoBehaviour {
 
 	public Drum drum;
+	private bool drum_activated = false;
 
 	// Use this for initialization
 	void Start () {
@@ -29,5 +30,20 @@ public class DrumButton : MonoBehaviour {
 
 	public void kill () {
 		drum.gameObject.SetActive (false);
+	}
+
+	void OnTriggerEnter(Collider other) {
+		if (!drum_activated) {
+			drum_activated = true;
+			gameObject.GetComponent<Renderer> ().material.color = Color.red;
+			//drum.transform.GetChild (4).transform.localPosition = new Vector3 (1.27f, -1.66f, -1.1f);
+			//drum.transform.GetChild (5).transform.localPosition = new Vector3 (1.22f, -1.68f, -0.96f);
+			drum.gameObject.SetActive (true);
+		} else {
+			drum_activated = false;
+			gameObject.GetComponent<Renderer> ().material.color = Color.blue;
+			drum.gameObject.SetActive (false);
+		}
+
 	}
 }

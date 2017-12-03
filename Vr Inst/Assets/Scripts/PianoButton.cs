@@ -5,6 +5,8 @@ using UnityEngine;
 public class PianoButton : MonoBehaviour {
 
 	public Piano piano;
+	private bool piano_activated = false;
+
 
 	// Use this for initialization
 	void Start () {
@@ -30,5 +32,17 @@ public class PianoButton : MonoBehaviour {
 
 	public void kill () {
 		piano.gameObject.SetActive (false);
+	}
+
+	void OnTriggerEnter(Collider other) {
+		if (!piano_activated) {
+			piano_activated = true;
+			gameObject.GetComponent<Renderer> ().material.color = Color.red;
+			piano.gameObject.SetActive (true);
+		} else {
+			piano_activated = false;
+			gameObject.GetComponent<Renderer> ().material.color = Color.blue;
+			piano.gameObject.SetActive (false);
+		}
 	}
 }

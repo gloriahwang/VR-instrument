@@ -22,14 +22,12 @@ public class VolumeUp : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		foreach (AudioSource audio in drumAudios) {
-			audio.volume += 0.1f;
+			audio.volume += 0.2f;
 		}
 		foreach (AudioSource audio in pianoAudios) {
-			audio.volume += 0.1f;
+			audio.volume += 0.2f;
 		}
 		StartCoroutine (Blinker ());
-
-
 
 
 	}

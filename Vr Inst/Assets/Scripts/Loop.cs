@@ -41,5 +41,13 @@ public class Loop : MonoBehaviour {
 				audio.loop = looper;
 			}
 	}
+		StartCoroutine (Blinker ());
+
+
 }
+	IEnumerator Blinker() {
+		gameObject.GetComponent<Renderer> ().material.color = Color.red;
+		yield return new WaitForSeconds (0.4f);
+		gameObject.GetComponent<Renderer> ().material.color = Color.yellow;
+	}
 }

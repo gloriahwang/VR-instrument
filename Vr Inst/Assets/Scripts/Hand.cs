@@ -10,9 +10,6 @@ public class Hand : MonoBehaviour {
 	private float handTriggerState = 0;
 	private float oldIndexTriggerState = 0;
 
-	private bool drum_activated = false;
-	private bool piano_activated = false;
-	private bool theremin_activated = false;
 	public Drum drum;
 	public Piano piano;
 	public Theremin theremin;
@@ -50,44 +47,6 @@ public class Hand : MonoBehaviour {
 
 		holdingStick = false;
 		stick = null;
-	}
-
-	void OnTriggerEnter(Collider other) {
-		print (other.name);
-		if (other.CompareTag ("drum_button")) {
-			if (!drum_activated) {
-				drum_activated = true;
-				other.gameObject.GetComponent<Renderer> ().material.color = Color.red;
-				//drum.transform.GetChild (4).transform.localPosition = new Vector3 (1.27f, -1.66f, -1.1f);
-				//drum.transform.GetChild (5).transform.localPosition = new Vector3 (1.22f, -1.68f, -0.96f);
-
-				drum.gameObject.SetActive (true);
-			} else {
-				drum_activated = false;
-				other.gameObject.GetComponent<Renderer> ().material.color = Color.blue;
-				drum.gameObject.SetActive (false);
-			}
-		} else if (other.CompareTag ("piano_button")) {
-			if (!piano_activated) {
-				piano_activated = true;
-				other.gameObject.GetComponent<Renderer> ().material.color = Color.red;
-				piano.gameObject.SetActive (true);
-			} else {
-				piano_activated = false;
-				other.gameObject.GetComponent<Renderer> ().material.color = Color.blue;
-				piano.gameObject.SetActive (false);
-			}
-		} else if (other.CompareTag ("theremin_button")) {
-			if (!theremin_activated) {
-				theremin_activated = true;
-				other.gameObject.GetComponent<Renderer> ().material.color = Color.red;
-				theremin.gameObject.SetActive (true);
-			} else {
-				theremin_activated = false;
-				other.gameObject.GetComponent<Renderer> ().material.color = Color.blue;
-				theremin.gameObject.SetActive (false);
-			}
-		}
 	}
 
 	void OnTriggerStay(Collider other) {
