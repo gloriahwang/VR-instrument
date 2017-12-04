@@ -18,6 +18,10 @@ public class Play : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-		audio.Play ();
+		if (other.CompareTag("LeftHand") || other.CompareTag("RightHand") || other.CompareTag("Stick")) {
+			audio.Play ();
+
+		}
+
 	}
 }
